@@ -10,7 +10,7 @@ export function setTokenHeader(token){
 }
 export function apiCall(method, path, data){
     return new Promise((resolve, reject) => {
-        return axios[method](path, data).then(res => {
+        return axios[method]("http://localhost:8088" + path, data).then(res => {
             if(res.status === 200)
                 resolve(res.data);
             else

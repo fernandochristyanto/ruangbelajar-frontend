@@ -14,7 +14,7 @@ class Landingpage extends Component {
     return (
       <div>
         <LandingpageHeader />
-        <content style={{ display: 'flex', alignItems: 'center' }}>
+        <content style={{ display: 'flex', alignItems: 'center', padding: '4rem' }}>
           <div style={{ padding: '6rem' }}>
             <h1 style={{ color: '#289ad6' }}>RuangBelajar.com</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum laborum in porro illo dolorum molestias ullam, quia omnis ducimus illum tenetur debitis ad ea asperiores odio modi quos nihil fugit?

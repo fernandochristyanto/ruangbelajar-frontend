@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 
 import Landingpage from './containers/Landingpage'
 import Login from './containers/login/Login'
-import Guru from './containers/guru/Guru'
+import Teacher from './containers/teacher/Teacher'
+import Student from './containers/student/Student'
 
 const AppRoute = props => {
   return (
@@ -12,7 +13,8 @@ const AppRoute = props => {
       <Switch>
         <Route exact path="/" render={props => <Landingpage {...props} />} />
         <Route path='/login' render={props => <Login {...props} />} />
-        <Route path='/guru' render={props => <Guru {...props} />} />
+        <Route path='/teacher' render={props => <Teacher {...props} />} />
+        <Route path='/student' render={props => <Student {...props} />} />
       </Switch>
     </div>
   )
