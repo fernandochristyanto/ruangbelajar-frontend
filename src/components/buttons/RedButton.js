@@ -1,25 +1,23 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-const WhiteButton = (props) => {
+const RedButton = (props) => {
   return (
     <button onClick={props.onClick} style={{
-      backgroundColor: '#FFF',
+      backgroundColor: 'red',
       borderRadius: '5px',
       outline: 'none',
-      color: "#289ad6",
+      color: "#FFF",
       padding: '.4rem .7rem',
       fontWeight: 600,
-      cursor: 'pointer',
-      ...props.style
+      cursor: 'pointer'
     }}>{props.buttonText}</button>
   )
 }
 
-WhiteButton.propTypes = {
+RedButton.propTypes = {
   buttonText: propTypes.string.isRequired,
-  onClick: propTypes.func,
-  style: propTypes.object
+  onClick: propTypes.func
 }
 
-export default WhiteButton
+export default RedButton
