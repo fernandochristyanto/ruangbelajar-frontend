@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import dummyImg from '../../assets/img/3-3.jpg'
 import RedButton from '../../components/buttons/RedButton'
 import { connect } from 'react-redux'
+import BlueButton from '../../components/buttons/BlueButton';
 
 class CourseplaceDetail extends Component {
   constructor(props) {
@@ -74,28 +75,14 @@ class CourseplaceDetail extends Component {
                 <div>
                   <p><i className="phone square icon"></i><b>Phone</b>: {courseplace.phone}</p>
                 </div>
-                <h3>Dibutuhkan</h3>
-                {this.renderWanting()}
               </div>
               <div style={{ padding: '1rem' }}>
                 <p>{courseplace.description}</p>
               </div>
             </section>
-            <section
-              style={{ width: '800px', backgroundColor: '#289ad6', color: 'white', padding: '2rem 2rem', margin: 'auto', boxShadow: '.1rem .1rem .7rem rgba(0,0,0,.8)' }}>
-              <div style={{ border: '2px solid white', margin: '2rem 5rem' }}>
-                <h2 style={{ textAlign: 'center' }}>RANGE GAJI</h2>
-              </div>
-              <p style={{ textAlign: 'center' }}>Rp. {courseplace.minSalary} - {courseplace.maxSalary}</p>
-            </section>
             <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-              {this.state.courseplace.interestedTeachers.includes(this.props.user.id) ?
-                <p>You have succesfully submitted your application to this course place</p> : <RedButton
-                  buttonText="Apply"
-                  onClick={this.applyToCoursePlace}
-                />
-              }
-
+              <BlueButton
+                buttonText="Register" />
             </div>
           </React.Fragment>
         }

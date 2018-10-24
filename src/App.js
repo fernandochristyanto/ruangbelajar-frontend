@@ -22,7 +22,6 @@ class App extends Component {
 
   render() {
     return (
-      <div>
         <Provider store={store}>
           <Router>
             <React.Fragment>
@@ -30,7 +29,6 @@ class App extends Component {
             </React.Fragment>
           </Router>
         </Provider>
-      </div>
     );
   }
 }

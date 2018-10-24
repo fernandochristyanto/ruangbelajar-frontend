@@ -34,6 +34,8 @@ class Login extends Component {
           case "student":
             this.props.history.push('/student/home')
             break;
+          case "admin":
+            this.props.history.push('/admin/home')
           default:
             break;
         }
@@ -47,7 +49,7 @@ class Login extends Component {
     return (
       <React.Fragment>
         <LandingpageHeader />
-        <section>
+        <section style={{marginTop:'4rem'}}>
           <div>
             <form action="">
               <h2 style={{ textAlign: 'center', color: '#289ad6' }}>Hi, Welcome to RuangBelajar.com</h2>
@@ -68,7 +70,7 @@ class Login extends Component {
                 </div>
               </div>
             </form>
-            <p style={{ textAlign: 'center', color: '#289ad6' }}>Belum punya account? <a style={{ color: 'red', cursor: 'pointer' }}>Daftar Disini</a></p>
+            <p style={{ textAlign: 'center', color: '#289ad6', marginTop:'1rem' }}>Belum punya account? <a style={{ color: 'red', cursor: 'pointer' }}>Daftar Disini</a></p>
           </div>
         </section>
         <Footer />

@@ -6,15 +6,10 @@ import WhiteButton from '../../components/buttons/WhiteButton'
 import { connect } from 'react-redux'
 import { setCurrentUser } from '../../store/actions/auth';
 
-const TeacherHeader = (props) => {
+const StudentHeader = (props) => {
   const toHome = (e) => {
     e.preventDefault();
-    props.history.push('/teacher/home')
-  }
-
-  const toHistory = (e) => {
-    e.preventDefault();
-    props.history.push('/teacher/history')
+    props.history.push('/student/home')
   }
 
   const logout = (e) => {
@@ -44,13 +39,6 @@ const TeacherHeader = (props) => {
             fontWeight: 700,
             cursor: 'pointer'
           }}
-            onClick={toHistory}>History</a>
-          <a style={{
-            color: '#FFF',
-            marginRight: '1rem',
-            fontWeight: 700,
-            cursor: 'pointer'
-          }}
             onClick={logout}>Logout</a>
         </div>
       </header>
@@ -60,4 +48,4 @@ const TeacherHeader = (props) => {
 
 export default withRouter(connect(null, {
   setCurrentUser
-})(TeacherHeader))
+})(StudentHeader))

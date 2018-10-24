@@ -14,7 +14,7 @@ const LandingpageHeader = (props) => {
 
   return (
     <React.Fragment>
-      <header style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#289ad6', padding: '.6rem', alignItems: 'center' }}>
+      <header style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#289ad6', padding: '.6rem', alignItems: 'center',boxShadow: '0rem .1rem .7rem rgba(0,0,0,.6)' }}>
         <div>
           <img src={logo} width="100" alt="" />
         </div>

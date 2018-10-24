@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 
 import TeacherHeader from '../../components/header/TeacherHeader'
 import Footer from '../../components/footer/Footer'
-import StudentHome from './StudentHome'
-import StudentHeader from '../../components/header/StudentHeader'
-import CourseplaceDetail from './CourseplaceDetail'
+import AdminHome from './AdminHome'
+import TeacherRequesterDetail from './TeacherRequesterDetail'
+import AdminHeader from '../../components/header/AdminHeader'
 
-class StudentRoute extends Component {
+class AdminRoute extends Component {
   constructor(props) {
     super(props);
 
@@ -22,19 +22,19 @@ class StudentRoute extends Component {
     const { match } = this.props;
     return (
       <div id="router">
-        <StudentHeader />
+        <AdminHeader />
         <Switch>
           <Route path={`${match.url}/home`} render={props => {
             return (
-              <StudentHome
+              <AdminHome
                 {...props}
               />
             )
           }} />
 
-          <Route path={`${match.url}/cp/v/:courseplaceId`} render={props => {
+          <Route path={`${match.url}/v/teacher/:teacherId`} render={props => {
             return (
-              <CourseplaceDetail
+              <TeacherRequesterDetail
                 {...props}
               />
             )
@@ -46,4 +46,4 @@ class StudentRoute extends Component {
   }
 }
 
-export default withRouter(StudentRoute);
+export default withRouter(AdminRoute);

@@ -6,15 +6,10 @@ import WhiteButton from '../../components/buttons/WhiteButton'
 import { connect } from 'react-redux'
 import { setCurrentUser } from '../../store/actions/auth';
 
-const TeacherHeader = (props) => {
+const AdminHeader = (props) => {
   const toHome = (e) => {
     e.preventDefault();
-    props.history.push('/teacher/home')
-  }
-
-  const toHistory = (e) => {
-    e.preventDefault();
-    props.history.push('/teacher/history')
+    props.history.push('/admin/home')
   }
 
   const logout = (e) => {
@@ -26,7 +21,7 @@ const TeacherHeader = (props) => {
   return (
     <React.Fragment>
       <header
-        style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#289ad6', padding: '.6rem', alignItems: 'center',boxShadow: '0rem .1rem .7rem rgba(0,0,0,.6)' }}>
+        style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: '#289ad6', padding: '.6rem', alignItems: 'center', boxShadow: '0rem .1rem .7rem rgba(0,0,0,.6)' }}>
         <div>
           <img src={logo} width="100" alt="" />
         </div>
@@ -44,13 +39,6 @@ const TeacherHeader = (props) => {
             fontWeight: 700,
             cursor: 'pointer'
           }}
-            onClick={toHistory}>History</a>
-          <a style={{
-            color: '#FFF',
-            marginRight: '1rem',
-            fontWeight: 700,
-            cursor: 'pointer'
-          }}
             onClick={logout}>Logout</a>
         </div>
       </header>
@@ -60,4 +48,4 @@ const TeacherHeader = (props) => {
 
 export default withRouter(connect(null, {
   setCurrentUser
-})(TeacherHeader))
+})(AdminHeader))
