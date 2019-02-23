@@ -77,6 +77,7 @@ class TeacherHome extends Component {
                   <li>Pendaftaran dan proses belajar yang dipermudah</li>
                 </ul>
               </div>
+              
             </div>
           </div>
           <section>
